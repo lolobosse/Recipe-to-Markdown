@@ -19,7 +19,7 @@ A site scraper is easily created:
 
 ```python
 import rescrape
-s = rescrape.site.AllRecipesCom("http://allrecipes.com/Recipe/Grilled-Salmon-I/Detail.aspx")
+s = rescrape.site.AllRecipes("http://allrecipes.com/Recipe/Grilled-Salmon-I/Detail.aspx")
 ```
 
 To print the recipe in Markdown form to standard out, just called:
@@ -31,7 +31,7 @@ s.write()
 You can also use the write function to create a text file:
 
 ```python
-s.write(to_file = true, "~/Recipes/")
+s.write(True, "~/Recipes/")
 ```
 
 For the [grilled salmon](http://allrecipes.com/Recipe/Grilled-Salmon-I/Detail.aspx) recipe, you'll get this:
