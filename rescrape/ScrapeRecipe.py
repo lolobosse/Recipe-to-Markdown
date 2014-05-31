@@ -80,7 +80,7 @@ def save_recipe(url):
         return 2
 
     if "allrecipes.com" in url:
-        scraper = AllRecipesCom(url)
+        scraper = AllRecipes(url)
         scraper.write(to_file=True)
     elif "thepioneerwoman.com" in url:
         scraper = PioneerWoman(url)
