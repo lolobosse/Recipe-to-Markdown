@@ -86,14 +86,14 @@ class RecipeScraper():
     def note(self):
         raise NotImplementedError("Should have implemented this")
 
-    def write(self, to_file=False, path="~/Dropbox/Text Notes/"):
+    def write(self, to_file=False, directory=""):
         if to_file:
-            path = os.path.expanduser(path)
+            directory = os.path.expanduser(directory)
 
-            fileName = path + self.title() + ".txt"
+            fileName = os.path.join(directory, self.title() + ".md")
 
             saveout = sys.stdout
-            fsock = open(fileName, 'w')
+            fsock = open(fileName, 'w+')
             sys.stdout = fsock
 
         # Print recipe title
