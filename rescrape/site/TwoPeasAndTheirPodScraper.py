@@ -21,10 +21,10 @@ class TwoPeas(RecipeScraper):
 		return str(a + b) + " minutes"
 	def ingredients(self):
 		for s in self.soup.findAll("div", {"class": "ingredient"}):
-			yield s.get_text().encode("ascii", "ignore").strip().replace("\n", " ")
+			yield s.get_text().encode("ascii", "ignore").strip()
 	def directions(self):
 		for s in self.soup.findAll("div", {"class": "instructions"}):
-			yield s.get_text().encode("ascii", "ignore").strip().replace("\n", " ")
+			yield s.get_text().encode("ascii", "ignore").strip()
 	def note(self):
 		return "none"
 
