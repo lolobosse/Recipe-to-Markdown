@@ -88,6 +88,9 @@ def save_recipe(url):
     if "food.com" in url:
         scraper = FoodCom(url)
         scraper.write(to_file=True)
+    if "twopeasandtheirpod.com" in url:
+        scraper = TwoPeas(url)
+        scraper.write(to_file = True)
 
 
 if __name__ == "__main__":
