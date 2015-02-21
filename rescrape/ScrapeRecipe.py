@@ -91,6 +91,9 @@ def save_recipe(url):
     if "twopeasandtheirpod.com" in url:
         scraper = TwoPeas(url)
         scraper.write(to_file = True)
+    if "marmiton.org" in url:
+        scraper = Marmiton(url)
+        scraper.write(to_file=True)
 
 
 if __name__ == "__main__":
